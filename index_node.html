@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Sample</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="home.js" rel="stylesheet" />
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="home_subscribe.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1 id="myh1">動画タイトル</h1>
+    </div>
+    <div>
+      <h1 id="examination">リアクション</h1>
+    </div>
+    <!-- iframeまわり -->
+    <div class="movieWrap">
+      <div id="player" class="col-lg-8" style="height: 70vh"></div>
+    </div>
+    <!-- ボタン -->
+    <div id="buttonWrap">
+      <!-- わらいボタン -->
+      <div id="funny" class="col-lg-1" onclick="FunnyClick()">
+        <p>😀</p>
+      </div>
+      <!-- いいねボタン -->
+      <div id="love" class="col-lg-1" onclick="LoveClick()">
+        <p>💗</p>
+      </div>
+      <!-- かなしいボタン -->
+      <div id="sad" class="col-lg-1" onclick="SadClick()">
+        <p>😢</p>
+      </div>
+      <!-- いかりボタン -->
+      <div id="angry" class="col-lg-1" onclick="AngryClick()">
+        <p>😡</p>
+      </div>
+      <!-- びっくりボタン -->
+      <div id="surprise" class="col-lg-1" onclick="SurpriseClick()">
+        <p>❗</p>
+      </div>
+      <!-- がっかりボタン -->
+      <div id="shock" class="col-lg-1" onclick="ShockClick()">
+        <p>😱</p>
+      </div>
+    </div>
+  </body>
+</html>

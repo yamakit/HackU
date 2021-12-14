@@ -1,0 +1,168 @@
+/* iframeの埋め込み動画の位置 */
+#player{
+    position: absolute;
+    top:18%;
+    left:4%;
+}
+
+/* 動画タイトル表記 */
+#myh1{
+    position: absolute;
+    top:6%;
+    left:4%;
+    font-size: 50px;
+}
+
+/* 評価ボタンの表記 */
+#examination{
+    position: absolute;
+    top: 18%;
+    right: 7.3%;
+}
+
+#funny{
+    position: absolute;
+    top: 28%;
+    right: 16%;
+    background: #e2e2e2;/*ボタン色*/
+    border-bottom: solid 8px #b1b1b1;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+}
+#funny:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+#love{
+    position: absolute;
+    top: 47%;
+    right: 16%;
+    background: #e2e2e2;/*ボタン色*/
+    border-bottom: solid 8px #b1b1b1;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+}
+#love:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+#sad{
+    position: absolute;
+    top: 66%;
+    right: 16%;
+    background: #e2e2e2;/*ボタン色*/
+    border-bottom: solid 8px #b1b1b1;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+}
+#sad:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+#angry{
+    position: absolute;
+    top: 47%;
+    right: 5%;
+    background: #e2e2e2;/*ボタン色*/
+    border-bottom: solid 8px #b1b1b1;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+}
+#angry:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+#surprise{
+    position: absolute;
+    top: 66%;
+    right: 5%;
+    background: #e2e2e2;/*ボタン色*/
+    border-bottom: solid 8px #b1b1b1;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+}
+#surprise:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+#shock{
+    position: absolute;
+    top: 28%;
+    right: 5%;
+    background: #e2e2e2;/*ボタン色*/
+    border-bottom: solid 8px #b1b1b1;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60px;
+}
+#shock:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+#button{
+    background: #e2e2e2;/*ボタン色*/
+    border-bottom: solid 8px #b1b1b1;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+#button:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+.btn-square-shadow-bikkuri {
+    font-size: 60px;
+    text-align: center;
+    display: inline-block;
+    /* padding: 0.5em 1.1em; */
+    text-decoration: none;
+    background: #e2e2e2;/*ボタン色*/
+    border-bottom: solid 8px #b1b1b1;
+    border-radius: 5px;
+}
+.btn-square-shadow-bikkuri:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}

@@ -1,55 +1,3 @@
-// ----------------------------------------------------------------------
-const express = require("express");
-const mysql = require("mysql");
-const pg = require("pg");
-const app = express();
-
-// var port = process.env.PORT || 5000;
-
-// // ====あとでprocfileを書き換える=========
-// // |web: vendor/bin/heroku-php-apache2 p|
-// // |worker: node home_publish.js        |
-// // ======================================
-
- app.get("/index.html", (req, res) => {
-   const { Client } = require("pg");
-   const client = new Client({
-     host: process.env.ENV_HOST,
-     database: process.env.ENV_DB,
-     user: process.env.ENV_USER,
-     port: 5432,
-     password: process.env.ENV_PASSWORD,
-     ssl: { rejectUnauthorized: false },
-   });
-   client.connect((error) => {
-    if (error) {
-       console.error("connection error", error.stack);
-     } else {
-       (async () => {
-         let rows;
-         console.log("connected");
-         await client
-           .query("SELECT * FROM judge")
-           .then((res) => {
-             rows = res.rows;
-             client.end();
-           })
-           .catch((err) => {
-             console.error(err.stack);
-             client.end();
-           });
-         console.log(rows);
-       })();
-     }
-   });
- });
- app.get("/register.html", (req, res) => {
-   res.send("aaaa");
- });
-
- app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-// ----------------------------------------------------------------------
-
 var server = require("ws").Server;
 var s = new server({ port: 5001 });
 var judge_cnts = {};
@@ -59,7 +7,7 @@ var judge_cnts = {};
 //     'movie_id_2':{["funny", ..., "shock"], 'team_name:'teamname'}...
 // }
 
-// const judge_kind = ["funny", "love", "sad", "angry", "surprise", "shock"];
+const judge_kind = ["funny", "love", "sad", "angry", "surprise", "shock"];
 
 s.on("connection", function (ws) {
   ws.on("message", function (message) {
@@ -92,7 +40,6 @@ s.on("connection", function (ws) {
             `${movie_id}:${judge_cnts[movie_id]["vote"]}:${judge_cnts[movie_id]["team_name"]}`
           );
         });
-        // insert
         break;
       case "team_name":
         console.log("teamname");

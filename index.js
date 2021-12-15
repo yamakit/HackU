@@ -1,5 +1,9 @@
-var server = require("ws").Server;
-var s = new server({ port: 5001 });
+const functions = require("firebase-functions");
+const express = require("express");
+const app = express();
+const server = require("ws").Server;
+
+const s = new server({ port: 5001 });
 var judge_cnts = {};
 // judge_cnts =
 // {
@@ -7,7 +11,14 @@ var judge_cnts = {};
 //     'movie_id_2':{["funny", ..., "shock"], 'team_name:'teamname'}...
 // }
 
-const judge_kind = ["funny", "love", "sad", "angry", "surprise", "shock"];
+// const judge_kind = ["funny", "love", "sad", "angry", "surprise", "shock"];
+// judge_cnts =
+// {
+//     'movie_id_1':{vote:["funny", "love", "sad", "angry", "surprise", "shock"],team_name:'teamname'},
+//     'movie_id_2':{["funny", ..., "shock"], 'team_name:'teamname'}...
+// }
+
+// const judge_kind = ["funny", "love", "sad", "angry", "surprise", "shock"];
 
 s.on("connection", function (ws) {
   ws.on("message", function (message) {
@@ -40,6 +51,7 @@ s.on("connection", function (ws) {
             `${movie_id}:${judge_cnts[movie_id]["vote"]}:${judge_cnts[movie_id]["team_name"]}`
           );
         });
+        // insert
         break;
       case "team_name":
         console.log("teamname");
